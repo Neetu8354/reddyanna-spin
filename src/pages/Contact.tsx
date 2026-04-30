@@ -13,7 +13,7 @@ const Contact = () => {
       "@context": "https://schema.org",
       "@type": "ContactPage",
       name: "Contact Mahadev Book",
-      url: "https://mahadevvbooks.com/contact",
+      url: "https://mahadevregister.live/contact",
       description: "Contact Mahadev Book on WhatsApp 24x7 in Hindi and English. Get your online cricket betting ID, deposit, withdrawal & support instantly.",
       mainEntity: {
         "@type": "Organization",
@@ -34,8 +34,8 @@ const Contact = () => {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevvbooks.com/" },
-        { "@type": "ListItem", position: 2, name: "Contact", item: "https://mahadevvbooks.com/contact" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevregister.live/" },
+        { "@type": "ListItem", position: 2, name: "Contact", item: "https://mahadevregister.live/contact" },
       ],
     },
   ];

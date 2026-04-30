@@ -26,5 +26,5 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://mahadevvbooks.com/sitemap.xml
-Host: https://mahadevvbooks.com
+Sitemap: https://mahadevregister.live/sitemap.xml
+Host: https://mahadevregister.live
