@@ -57,11 +57,32 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        gold: {
+          DEFAULT: 'hsl(var(--gold))',
+          light: 'hsl(var(--gold-light))',
+          dark: 'hsl(var(--gold-dark))',
+        },
+        whatsapp: 'hsl(var(--whatsapp))',
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['"Cinzel"', 'serif'],
+      },
+      backgroundImage: {
+        'gradient-gold': 'var(--gradient-gold)',
+        'gradient-gold-soft': 'var(--gradient-gold-soft)',
+        'gradient-dark': 'var(--gradient-dark)',
+        'gradient-radial-gold': 'var(--gradient-radial-gold)',
+      },
+      boxShadow: {
+        'gold': 'var(--shadow-gold)',
+        'gold-lg': 'var(--shadow-gold-lg)',
+        'card': 'var(--shadow-card)',
       },
       keyframes: {
         "accordion-down": {
