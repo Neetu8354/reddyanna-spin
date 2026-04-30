@@ -3,7 +3,7 @@ import { Sparkles, Trophy } from "lucide-react";
 
 export const CTABanner = () => (
   <section id="contact" className="container py-16 md:py-24">
-    <div className="relative rounded-3xl overflow-hidden border border-gold/40 bg-gradient-to-br from-card via-background to-card p-10 md:p-16 text-center">
+    <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-gold/40 bg-gradient-to-br from-card via-background to-card p-6 sm:p-10 md:p-16 text-center">
       <div className="absolute inset-0 bg-grid opacity-30" />
       <div className="absolute -top-20 -right-20 w-64 h-64 bg-gradient-radial-gold blur-3xl" />
       <div className="absolute -bottom-20 -left-20 w-64 h-64 bg-gradient-radial-gold blur-3xl" />

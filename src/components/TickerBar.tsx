@@ -14,7 +14,7 @@ export const TickerBar = () => (
     className="block bg-gradient-gold text-primary-foreground py-2.5 overflow-hidden border-b border-gold-dark">
     <div className="flex animate-marquee whitespace-nowrap">
       {[...ITEMS, ...ITEMS].map((item, i) => (
-        <span key={i} className="mx-8 text-sm font-bold tracking-wide">{item}</span>
+        <span key={i} className="mx-4 sm:mx-8 text-xs sm:text-sm font-bold tracking-wide">{item}</span>
       ))}
     </div>
   </a>

@@ -21,7 +21,7 @@ export const WhatsAppChatbot = () => {
   return (
     <>
       {/* Pulsing button */}
-      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex flex-col items-end gap-3">
         {showBubble && !open && (
           <button
             onClick={() => setOpen(true)}
@@ -34,7 +34,7 @@ export const WhatsAppChatbot = () => {
         <button
           onClick={() => setOpen(!open)}
           aria-label="Open WhatsApp chat"
-          className="relative w-16 h-16 rounded-full bg-whatsapp text-white flex items-center justify-center shadow-gold-lg hover:scale-110 transition-transform animate-pulse-whatsapp"
+          className="relative w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-whatsapp text-white flex items-center justify-center shadow-gold-lg hover:scale-110 transition-transform animate-pulse-whatsapp"
         >
           {open ? <X className="w-7 h-7" /> : (
             <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
@@ -46,7 +46,7 @@ export const WhatsAppChatbot = () => {
 
       {/* Chat panel */}
       {open && (
-        <div className="fixed bottom-28 right-6 z-50 w-[340px] max-w-[calc(100vw-3rem)] rounded-2xl overflow-hidden border border-gold/40 bg-card shadow-gold-lg animate-in fade-in slide-in-from-bottom-4 duration-300">
+        <div className="fixed bottom-24 right-4 sm:bottom-28 sm:right-6 z-50 w-[340px] max-w-[calc(100vw-2rem)] rounded-2xl overflow-hidden border border-gold/40 bg-card shadow-gold-lg animate-in fade-in slide-in-from-bottom-4 duration-300">
           <div className="bg-whatsapp text-white px-4 py-3 flex items-center gap-3">
             <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
               <MessageCircle className="w-5 h-5" />
