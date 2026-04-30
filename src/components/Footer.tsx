@@ -1,9 +1,11 @@
 import logo from "@/assets/logo.png";
+import { Link } from "react-router-dom";
 import { WHATSAPP_LINK } from "@/lib/links";
+import { BLOG_POSTS } from "@/data/blogPosts";
 
 export const Footer = () => (
   <footer className="border-t border-gold/20 bg-gradient-dark mt-12">
-    <div className="container py-14 grid md:grid-cols-4 gap-10">
+    <div className="container py-14 grid md:grid-cols-5 gap-10">
       <div className="md:col-span-2">
         <img src={logo} alt="Mahadev Book Logo" className="h-14 w-auto mb-4" />
         <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
@@ -18,10 +20,11 @@ export const Footer = () => (
       <div>
         <h4 className="font-display font-bold text-gold mb-4">Quick Links</h4>
         <ul className="space-y-2 text-sm text-muted-foreground">
-          <li><a href="#home" className="hover:text-gold">Home</a></li>
-          <li><a href="#cricket" className="hover:text-gold">Cricket Betting</a></li>
-          <li><a href="#casino" className="hover:text-gold">Live Casino</a></li>
-          <li><a href="#about" className="hover:text-gold">About / FAQ</a></li>
+          <li><Link to="/" className="hover:text-gold">Home</Link></li>
+          <li><a href="/#cricket" className="hover:text-gold">Cricket Betting</a></li>
+          <li><a href="/#casino" className="hover:text-gold">Live Casino</a></li>
+          <li><Link to="/blog" className="hover:text-gold">Blog</Link></li>
+          <li><a href="/#about" className="hover:text-gold">About / FAQ</a></li>
           <li><a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-gold">Contact</a></li>
         </ul>
       </div>
@@ -33,6 +36,17 @@ export const Footer = () => (
           <li><a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-gold">Login</a></li>
           <li><a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-gold">Sign Up</a></li>
           <li><a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-gold">Deposit / Withdraw</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 className="font-display font-bold text-gold mb-4">Top Guides</h4>
+        <ul className="space-y-2 text-sm text-muted-foreground">
+          {BLOG_POSTS.slice(0, 5).map(p => (
+            <li key={p.slug}>
+              <Link to={`/blog/${p.slug}`} className="hover:text-gold line-clamp-2">{p.title}</Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

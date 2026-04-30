@@ -2,13 +2,15 @@ import logo from "@/assets/logo.png";
 import { WHATSAPP_LINK } from "@/lib/links";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const NAV = [
-  { label: "Home", href: "#home" },
-  { label: "Cricket", href: "#cricket" },
-  { label: "Casino", href: "#casino" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "Cricket", href: "/#cricket" },
+  { label: "Casino", href: "/#casino" },
+  { label: "Blog", href: "/blog" },
+  { label: "About", href: "/#about" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const Header = () => {
@@ -27,15 +29,15 @@ export const Header = () => {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-          {NAV.map((n) => (
-            <a
-              key={n.href}
-              href={n.href}
-              className="text-sm font-medium text-foreground/90 hover:text-gold transition-colors"
-            >
-              {n.label}
-            </a>
-          ))}
+          {NAV.map((n) => {
+            const isInternal = n.href.startsWith("/") && !n.href.includes("#");
+            const cls = "text-sm font-medium text-foreground/90 hover:text-gold transition-colors";
+            return isInternal ? (
+              <Link key={n.href} to={n.href} className={cls}>{n.label}</Link>
+            ) : (
+              <a key={n.href} href={n.href} className={cls}>{n.label}</a>
+            );
+          })}
         </nav>
 
         {/* Right cluster — auth buttons + menu icon */}
@@ -69,11 +71,15 @@ export const Header = () => {
 
       {open && (
         <div className="lg:hidden border-t border-gold/20 bg-background/95 px-6 py-4 space-y-3">
-          {NAV.map((n) => (
-            <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="block py-2 text-foreground/90 hover:text-gold">
-              {n.label}
-            </a>
-          ))}
+          {NAV.map((n) => {
+            const isInternal = n.href.startsWith("/") && !n.href.includes("#");
+            const cls = "block py-2 text-foreground/90 hover:text-gold";
+            return isInternal ? (
+              <Link key={n.href} to={n.href} onClick={() => setOpen(false)} className={cls}>{n.label}</Link>
+            ) : (
+              <a key={n.href} href={n.href} onClick={() => setOpen(false)} className={cls}>{n.label}</a>
+            );
+          })}
           <div className="flex gap-2 pt-2">
             <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
               className="flex-1 text-center px-5 py-2.5 rounded-full font-semibold border border-gold/50 text-gold">
