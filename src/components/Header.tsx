@@ -29,15 +29,15 @@ export const Header = () => {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
-          {NAV.map((n) => (
-            <a
-              key={n.href}
-              href={n.href}
-              className="text-sm font-medium text-foreground/90 hover:text-gold transition-colors"
-            >
-              {n.label}
-            </a>
-          ))}
+          {NAV.map((n) => {
+            const isInternal = n.href.startsWith("/") && !n.href.includes("#");
+            const cls = "text-sm font-medium text-foreground/90 hover:text-gold transition-colors";
+            return isInternal ? (
+              <Link key={n.href} to={n.href} className={cls}>{n.label}</Link>
+            ) : (
+              <a key={n.href} href={n.href} className={cls}>{n.label}</a>
+            );
+          })}
         </nav>
 
         {/* Right cluster — auth buttons + menu icon */}
