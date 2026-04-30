@@ -8,6 +8,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const SLIDES = [
   {
     img: promoCricket,
+    alt: "IPL 2026 cricket betting bonus on Mahadev Book India — claim now",
     eyebrow: "IPL 2026 Special",
     title: "Cricket Betting Bonus",
     subtitle: "Win up to ₹1,00,000 on every IPL match. Live odds on every ball.",
@@ -15,6 +16,7 @@ const SLIDES = [
   },
   {
     img: promoCasino,
+    alt: "Royale live casino India — Teen Patti Andar Bahar Roulette on Mahadev Book",
     eyebrow: "Live Casino",
     title: "Royale Live Casino",
     subtitle: "Teen Patti, Andar Bahar, Roulette & Blackjack with real dealers, 24x7.",
@@ -22,6 +24,7 @@ const SLIDES = [
   },
   {
     img: promoPayout,
+    alt: "Instant UPI withdrawal in INR rupees — Mahadev Book betting India",
     eyebrow: "Instant Payouts",
     title: "Withdraw in ₹ Rupees",
     subtitle: "UPI, IMPS, NEFT, Paytm & Bank — instant deposit & withdrawal in INR.",
@@ -47,7 +50,7 @@ export const PromoSlider = () => {
             key={idx}
             className={`absolute inset-0 transition-opacity duration-700 ${idx === i ? "opacity-100" : "opacity-0 pointer-events-none"}`}
           >
-            <img src={s.img} alt={s.title} className="w-full h-full object-cover" loading="lazy" />
+            <img src={s.img} alt={s.alt} className="w-full h-full object-cover" loading="lazy" width={1920} height={720} />
             <div className="absolute inset-0 bg-gradient-to-t sm:bg-gradient-to-r from-background via-background/80 sm:via-background/70 to-transparent" />
             <div className="absolute inset-0 flex items-end sm:items-center">
               <div className="container py-6 sm:py-0">

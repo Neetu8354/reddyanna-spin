@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TickerBar } from "@/components/TickerBar";
 import { SEO } from "@/components/SEO";
-import { BLOG_POSTS } from "@/data/blogPosts";
+import { BLOG_POSTS, altFor } from "@/data/blogPosts";
 import { renderMarkdown } from "@/lib/markdown";
 import { WHATSAPP_LINK } from "@/lib/links";
 import { Calendar, Clock, ArrowLeft, MessageCircle } from "lucide-react";
@@ -23,7 +23,7 @@ const BlogPost = () => {
       mainEntityOfPage: { "@type": "WebPage", "@id": url },
       headline: post.title,
       description: post.description,
-      image: [`https://mahadevvbooks.com${post.cover.replace("/src/assets", "/src/assets")}`],
+      image: [`https://mahadevvbooks.com/og-image.jpg`],
       datePublished: post.publishedAt,
       dateModified: post.updatedAt,
       author: { "@type": "Organization", name: post.author, url: "https://mahadevvbooks.com" },
@@ -71,7 +71,7 @@ const BlogPost = () => {
         publishedTime={post.publishedAt}
         modifiedTime={post.updatedAt}
         author={post.author}
-        ogImage={post.cover}
+        ogImage="/og-image.jpg"
         jsonLd={jsonLd}
       />
       <TickerBar />
@@ -99,7 +99,7 @@ const BlogPost = () => {
           </header>
 
           <div className="aspect-video w-full rounded-2xl overflow-hidden border border-gold/20 mb-8 bg-muted">
-            <img src={post.cover} alt={post.title} className="w-full h-full object-cover" loading="eager" />
+            <img src={post.cover} alt={altFor(post.cover)} className="w-full h-full object-cover" loading="eager" fetchPriority="high" width={1280} height={720} />
           </div>
 
           <div className="prose-invert max-w-none">

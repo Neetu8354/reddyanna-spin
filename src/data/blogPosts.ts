@@ -20,18 +20,50 @@ export interface BlogPost {
   faq?: { q: string; a: string }[];
 }
 
+import sportCricket from "@/assets/sport-cricket.jpg";
+import heroCricket from "@/assets/hero-cricket.jpg";
+import gameTeenpatti from "@/assets/game-teenpatti.jpg";
+import gameAndar from "@/assets/game-andarbahar.jpg";
+import gameRoulette from "@/assets/game-roulette.jpg";
+import gameDragon from "@/assets/game-dragontiger.jpg";
+import gameSlots from "@/assets/game-slots.jpg";
+import gameBlackjack from "@/assets/game-blackjack.jpg";
+import promoPayout from "@/assets/promo-payout.jpg";
+import promoCasino from "@/assets/promo-casino.jpg";
+import promoCricket from "@/assets/promo-cricket.jpg";
+
 const COVER = {
-  cricket: "/src/assets/sport-cricket.jpg",
-  hero: "/src/assets/hero-cricket.jpg",
-  teenpatti: "/src/assets/game-teenpatti.jpg",
-  andar: "/src/assets/game-andarbahar.jpg",
-  roulette: "/src/assets/game-roulette.jpg",
-  dragon: "/src/assets/game-dragontiger.jpg",
-  slots: "/src/assets/game-slots.jpg",
-  blackjack: "/src/assets/game-blackjack.jpg",
-  payout: "/src/assets/promo-payout.jpg",
-  casino: "/src/assets/promo-casino.jpg",
-  promoCricket: "/src/assets/promo-cricket.jpg",
+  cricket: sportCricket,
+  hero: heroCricket,
+  teenpatti: gameTeenpatti,
+  andar: gameAndar,
+  roulette: gameRoulette,
+  dragon: gameDragon,
+  slots: gameSlots,
+  blackjack: gameBlackjack,
+  payout: promoPayout,
+  casino: promoCasino,
+  promoCricket: promoCricket,
+};
+
+/** Keyword-rich ALT text per blog cover (PDF SEO reference compliant) */
+export const COVER_ALT: Record<string, string> = {
+  cricket: "Play online cricket betting on Mahadev Book — IPL 2026 live odds India",
+  hero: "Get Mahadev Book cricket ID online — fast withdrawal India",
+  teenpatti: "Play Teen Patti online real money on Mahadev Book India",
+  andar: "Live Andar Bahar online with Mahadev Book — INR deposits",
+  roulette: "Play live Roulette online India on Mahadev Book casino",
+  dragon: "Dragon Tiger live casino game on Mahadev Book India",
+  slots: "777 online slots real money India — Mahadev Book casino",
+  blackjack: "Live Blackjack online India — play with Mahadev Book ID",
+  payout: "Instant UPI withdrawal in INR with Mahadev Book betting India",
+  casino: "Best live casino India online — Mahadev Book Teen Patti & Roulette",
+  promoCricket: "IPL 2026 betting bonus on Mahadev Book — India's #1 cricket ID",
+};
+
+export const altFor = (cover: string): string => {
+  const entry = Object.entries(COVER).find(([, v]) => v === cover);
+  return entry ? COVER_ALT[entry[0]] : "Mahadev Book online cricket betting India";
 };
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -456,6 +488,292 @@ We made deposits, placed bets, and tested withdrawals on 12 providers including 
 `,
     faq: [
       { q: "Is Mahadev Book the best ID provider in India?", a: "Based on our 30-day test across 12 providers, Mahadev Book scored highest on payout speed, support and odds quality." },
+    ],
+  },
+  {
+    slug: "safe-online-betting-websites-india-2026",
+    title: "Safe Online Betting Websites India 2026 — Trust & Security Checklist",
+    description: "How to identify safe online betting websites in India 2026 — KYC, encryption, payout proof, license. Why Mahadev Book scores 10/10.",
+    keywords: "safe online betting websites 2026, safe betting site india, trusted betting website india",
+    category: "Safety", author: "Mahadev Book Editorial", publishedAt: "2026-03-10", updatedAt: "2026-04-29", readingTime: 8,
+    cover: COVER.payout,
+    excerpt: "12-point checklist to identify safe online betting websites in India for 2026.",
+    tags: ["safety", "trust"], related: ["how-to-get-online-cricket-betting-id-india-2026", "best-upi-deposit-withdrawal-betting-india", "mahadev-book-vs-other-betting-id-providers"],
+    content: `
+## Why Site Safety Matters
+Before you [get a Mahadev Book ID](/contact), use this 12-point safety checklist for every **safe online betting website India 2026**.
+
+## 12-Point Safety Checklist
+1. HTTPS + valid SSL  2. KYC before withdrawal  3. Verified UPI handle  4. Public payout proof  5. 24x7 human WhatsApp  6. Real INR balance  7. No 50x rollover traps  8. Licensed providers (Evolution, Ezugi, Pragmatic)  9. Withdrawal under 30 min  10. Transparent T&Cs  11. Responsible-gambling tools  12. 18+ age check.
+
+## Why Mahadev Book Scores 10/10
+[Mahadev Book](/) ticks every box. Compare in [Mahadev Book vs other providers](/blog/mahadev-book-vs-other-betting-id-providers).
+
+## Verify Any Site in 60 Seconds
+Search "[site name] payout proof" on Telegram, check WHOIS for domain age, test live chat, deposit ₹100 first.
+`,
+    faq: [
+      { q: "Are all betting websites in India safe?", a: "No. Run the 12-point checklist before depositing." },
+      { q: "Is Mahadev Book safe?", a: "Yes — KYC, encrypted UPI, instant payout, 6 years live, 12,000+ verified players." },
+    ],
+  },
+  {
+    slug: "mobile-friendly-cricket-betting-apps-india",
+    title: "Mobile Friendly Sports Betting Platforms India 2026 — Best Apps Tested",
+    description: "Best mobile friendly sports betting platforms India 2026 — Mahadev Book mobile site loads under 2 seconds, no app download.",
+    keywords: "mobile friendly sports betting platforms, cricket betting app india, mahadev book mobile",
+    category: "Mobile", author: "Mahadev Book Mobile Team", publishedAt: "2026-03-15", updatedAt: "2026-04-26", readingTime: 7,
+    cover: COVER.hero,
+    excerpt: "Why your phone is the best betting device in 2026 — and how Mahadev Book mobile beats every dedicated app.",
+    tags: ["mobile", "app"], related: ["live-in-play-cricket-betting-guide", "ipl-2026-betting-tips-strategy", "how-to-get-online-cricket-betting-id-india-2026"],
+    content: `
+## Why Mobile-First Beats App Downloads
+Apple and Google ban most real-money apps. Smarter: a **mobile-friendly sports betting platform** like [Mahadev Book](/) — under 2-second load, no install risk.
+
+## What Makes a Site Truly Mobile-Friendly
+One-thumb nav, 2s load on 4G, touch-optimized slip, 3-tap UPI, push-style live odds, works on any phone.
+
+## How to Add Mahadev Book to Home Screen
+iPhone: Safari → Share → Add to Home Screen. Android: Chrome → menu → Add to Home Screen. App-like, safer.
+
+[Contact us](/contact) for instant ID setup.
+`,
+    faq: [
+      { q: "Is there a Mahadev Book app?", a: "Mobile-optimized site — no app needed. Add to home screen for app-like access." },
+      { q: "Works on iPhone?", a: "Yes — full functionality on iOS Safari and Chrome." },
+    ],
+  },
+  {
+    slug: "best-cricket-prediction-sites-online-india",
+    title: "Best Cricket Prediction Sites Online India 2026 — Free Daily Tips",
+    description: "Best cricket prediction sites online India 2026 — daily IPL predictions, pitch reports, toss tips. Use with Mahadev Book ID.",
+    keywords: "best cricket prediction sites online, cricket prediction india, ipl prediction today",
+    category: "Strategy", author: "Mahadev Book Pro Tipsters", publishedAt: "2026-03-20", updatedAt: "2026-04-27", readingTime: 9,
+    cover: COVER.cricket,
+    excerpt: "Top free cricket prediction sites for India 2026 + how to combine with Mahadev Book live odds.",
+    tags: ["predictions", "tips"], related: ["ipl-2026-betting-tips-strategy", "live-in-play-cricket-betting-guide", "fancy-vs-bookmaker-vs-match-odds-explained"],
+    content: `
+## Why Cricket Predictions Beat Guesswork
+Use **best cricket prediction sites online** with your [Mahadev Book ID](/contact) to bet smarter.
+
+## Top Free Sources
+CrickInfo Stats Guru, CricViz, Tipster Telegram channels, our [IPL 2026 strategy](/blog/ipl-2026-betting-tips-strategy), and broadcaster pitch reports.
+
+## How to Bet on Live Cricket Matches Online
+1. [Get a Mahadev Book ID](/contact)  2. UPI deposit ₹100  3. Match prediction vs live odds  4. Bet only when odds > implied probability  5. Cap stake at 2% of bankroll.
+
+Read our [in-play cricket betting guide](/blog/live-in-play-cricket-betting-guide).
+`,
+    faq: [
+      { q: "Are predictions accurate?", a: "Top sites hit 55–65% on match-odds. Use as one input, never gospel." },
+      { q: "Free?", a: "Most public predictions are free." },
+    ],
+  },
+  {
+    slug: "how-to-bet-t20-world-cup-online-india",
+    title: "How to Bet on T20 World Cup Online India 2026 — Markets & Strategy",
+    description: "Complete guide to betting on T20 World Cup online India 2026 — match-odds, fancy, top batsman. Use Mahadev Book live INR betting 24x7.",
+    keywords: "how to bet t20 world cup online, t20 world cup betting india, icc t20 betting tips",
+    category: "Strategy", author: "Mahadev Book Pro Tipsters", publishedAt: "2026-03-25", updatedAt: "2026-04-28", readingTime: 10,
+    cover: COVER.promoCricket,
+    excerpt: "Step-by-step guide to betting on the T20 World Cup 2026 with Mahadev Book.",
+    tags: ["t20 world cup"], related: ["ipl-2026-betting-tips-strategy", "fancy-vs-bookmaker-vs-match-odds-explained", "live-in-play-cricket-betting-guide"],
+    content: `
+## T20 World Cup 2026 — Biggest Betting Event
+**How to bet on T20 World Cup online** with your [Mahadev Book ID](/contact):
+
+## Step 1 — Get Your ID
+[Message us on WhatsApp](/contact) — verified ID in 2 minutes.
+
+## Step 2 — Best Markets
+Match-odds, top batsman/bowler, group winner, fancy/session — see [fancy vs bookmaker explained](/blog/fancy-vs-bookmaker-vs-match-odds-explained).
+
+## Step 3 — Find Group-Stage Value
+Public money piles on India/England/Australia. Look for value on NZ, SA, WI at +250 or longer.
+
+## Step 4 — Bankroll
+Cap World Cup spend at 10% of bankroll, max 2% per match. See full [IPL 2026 strategy](/blog/ipl-2026-betting-tips-strategy).
+`,
+    faq: [
+      { q: "When does T20 World Cup 2026 start?", a: "Mahadev Book opens markets 6 weeks pre-tournament." },
+      { q: "Bet on every match?", a: "Yes — all 55 matches in INR." },
+    ],
+  },
+  {
+    slug: "online-sports-gaming-app-india-explained",
+    title: "Online Sports Gaming App India 2026 — Mahadev Book vs Native Apps",
+    description: "Why Mahadev Book mobile site beats every online sports gaming app in India 2026 — no download, no Play Store risk.",
+    keywords: "online sports gaming app online, sports gaming app india, mahadev book app",
+    category: "Mobile", author: "Mahadev Book Mobile Team", publishedAt: "2026-03-28", updatedAt: "2026-04-29", readingTime: 6,
+    cover: COVER.hero,
+    excerpt: "App vs mobile site — why Mahadev Book mobile wins for Indian players.",
+    tags: ["mobile", "app"], related: ["mobile-friendly-cricket-betting-apps-india", "safe-online-betting-websites-india-2026", "how-to-get-online-cricket-betting-id-india-2026"],
+    content: `
+## Apps vs Mobile Sites — The Truth
+Most **online sports gaming app** options are banned or risky APKs. Use [Mahadev Book](/) directly in browser.
+
+## Why Mobile Site Wins
+Zero install risk, auto-updates, same features, works on iOS/Android/tablets, no store-ban risk.
+
+## How to Join Online Sports Gaming Website
+Visit on phone → tap "Get ID" → WhatsApp → verified ID in 2 min → UPI ₹100 → bet in INR.
+
+Read [getting-started guide](/blog/how-to-get-online-cricket-betting-id-india-2026).
+`,
+    faq: [
+      { q: "Is there a Mahadev Book APK?", a: "We do not distribute APKs. Use the mobile site." },
+      { q: "Phone compatibility?", a: "Any phone with a modern browser (2018+)." },
+    ],
+  },
+  {
+    slug: "how-to-login-mahadev-book-step-by-step",
+    title: "How to Login Mahadev Book Step by Step — Username, Password & Recovery 2026",
+    description: "Mahadev Book login guide step by step — login with username and password, reset forgotten password, stay secure.",
+    keywords: "how to login mahadev book, mahadev book login guide step by step, mahadev book login with username",
+    category: "Guides", author: "Mahadev Book Support", publishedAt: "2026-04-01", updatedAt: "2026-04-29", readingTime: 5,
+    cover: COVER.payout,
+    excerpt: "Complete step-by-step Mahadev Book login guide.",
+    tags: ["login", "account"], related: ["how-to-get-online-cricket-betting-id-india-2026", "safe-online-betting-websites-india-2026", "best-upi-deposit-withdrawal-betting-india"],
+    content: `
+## How to Login Mahadev Book With Username
+1. After [getting your Mahadev Book ID](/contact) you receive username, password, login URL.
+2. Open URL → enter credentials → tap "Sign In".
+3. Change password immediately.
+
+## Forgot Password?
+[WhatsApp us](/contact) — reset in 60 seconds, 24x7.
+
+## Stay Secure
+Unique 12+ character password, never share, enable 2FA, logout on shared devices.
+
+## After Login — Place a Bet
+Pick sport → market → stake → confirm. Need help? See [IPL 2026 strategy](/blog/ipl-2026-betting-tips-strategy).
+`,
+    faq: [
+      { q: "Forgot password?", a: "WhatsApp support — instant reset 24x7." },
+      { q: "Login not working?", a: "Most often caps-lock or expired password. WhatsApp us." },
+    ],
+  },
+  {
+    slug: "how-to-place-bet-on-mahadev-book-online-site",
+    title: "How to Place a Bet on Mahadev Book Online Site — Cricket & Casino",
+    description: "Complete walkthrough on how to place a bet on Mahadev Book online site — cricket match-odds, fancy, Teen Patti, Roulette.",
+    keywords: "how to place a bet on mahadev book online site, place cricket bet online india",
+    category: "Guides", author: "Mahadev Book Editorial", publishedAt: "2026-04-05", updatedAt: "2026-04-30", readingTime: 7,
+    cover: COVER.cricket,
+    excerpt: "Step-by-step guide to placing your first bet on Mahadev Book.",
+    tags: ["tutorial"], related: ["how-to-login-mahadev-book-step-by-step", "ipl-2026-betting-tips-strategy", "fancy-vs-bookmaker-vs-match-odds-explained"],
+    content: `
+## How to Place a Bet on Mahadev Book Online Site — Cricket
+1. [Login Mahadev Book](/blog/how-to-login-mahadev-book-step-by-step)
+2. Tap "Cricket" → today's match
+3. See Match-Odds, Bookmaker, Fancy
+4. Tap odd (e.g. India @ 1.85) → enter ₹500 → "Place Bet"
+5. Auto-settles at match end.
+
+Payout example: ₹500 @ 1.85 = ₹925 returned.
+
+## Teen Patti Bet
+Tap Casino → Teen Patti Live → choose table → place chip → live dealer reveals → instant credit.
+
+## Roulette Bet
+Tap Roulette → European table → chips on numbers/colours → spin → instant INR credit.
+
+## Pro Tips
+Start ₹10–₹100, read [fancy vs bookmaker vs match-odds](/blog/fancy-vs-bookmaker-vs-match-odds-explained), cap session loss at 5%.
+`,
+    faq: [
+      { q: "Minimum bet?", a: "₹10 on most markets." },
+      { q: "When does my bet settle?", a: "Match-odds at match end. Casino instantly." },
+    ],
+  },
+  {
+    slug: "online-betting-website-india-vs-offline-bookies",
+    title: "Online Betting Website India 2026 vs Offline Bookies — Why Online Wins",
+    description: "Online betting website India vs offline local bookies — payout speed, safety, odds. 7 reasons Mahadev Book beats every street bookmaker.",
+    keywords: "online betting website india, online vs offline betting, mahadev book vs bookie",
+    category: "Comparison", author: "Mahadev Book Editorial", publishedAt: "2026-04-08", updatedAt: "2026-04-29", readingTime: 8,
+    cover: COVER.casino,
+    excerpt: "Online vs your local street bookie — 7 critical factors compared.",
+    tags: ["comparison"], related: ["safe-online-betting-websites-india-2026", "best-upi-deposit-withdrawal-betting-india", "mahadev-book-vs-other-betting-id-providers"],
+    content: `
+## Why Indians Are Moving Online
+**Online betting website India** options like [Mahadev Book](/) win on every measurable factor.
+
+## 7 Factors
+- Payout: bookie 2–7 days vs Mahadev Book 5–15 min UPI
+- Odds: bookie sets vs live exchange
+- Safety: cash vs KYC + encrypted
+- Markets: match-odds only vs match/fancy/session/casino
+- Limits: bookie discretion vs transparent
+- Support: phone vs 24x7 WhatsApp
+- Bonuses: none vs welcome + reload
+
+## How to Switch
+[Get a Mahadev Book ID](/contact) → ₹100 UPI → small bet → withdraw to verify → scale up.
+
+Read [getting-started guide](/blog/how-to-get-online-cricket-betting-id-india-2026) and [login walkthrough](/blog/how-to-login-mahadev-book-step-by-step).
+`,
+    faq: [
+      { q: "Safer than a bookie?", a: "Yes — encrypted, KYC, instant payout, full bet history." },
+      { q: "Bigger stakes?", a: "Yes — exchange accepts far larger stakes than most local bookies." },
+    ],
+  },
+  {
+    slug: "live-sports-betting-site-india-features",
+    title: "Live Sports Betting Site India 2026 — 9 Features That Separate Pros From Amateurs",
+    description: "What makes a true live sports betting site India 2026 — sub-second odds, in-play cash-out, live streaming. Mahadev Book ticks all 9.",
+    keywords: "live sports betting site, in-play betting india, live cricket betting tips online",
+    category: "Strategy", author: "Mahadev Book Pro Tipsters", publishedAt: "2026-04-12", updatedAt: "2026-04-30", readingTime: 9,
+    cover: COVER.cricket,
+    excerpt: "Nine features that separate a real live sports betting site from a fake one.",
+    tags: ["live betting", "in-play"], related: ["live-in-play-cricket-betting-guide", "ipl-2026-betting-tips-strategy", "best-cricket-prediction-sites-online-india"],
+    content: `
+## What Makes a True Live Sports Betting Site
+**Live sports betting site** like [Mahadev Book](/) refreshes odds in <1 second.
+
+## 9-Feature Checklist
+Sub-second odds, in-play cash-out, live streaming, ball-by-ball fancy, auto-suspend, mobile UI, multi-bet slip, live commentary, 24x7 settlement.
+
+## How to Bet Live on Cricket — 4 Pro Tactics
+Wait for toss; lay favourites after powerplay if pitch slows; use fancy session bets for higher EV; cash out at 70%+ of max profit.
+
+## Live Cricket Betting Tips Online
+Read [in-play cricket betting guide](/blog/live-in-play-cricket-betting-guide) + [best cricket prediction sites](/blog/best-cricket-prediction-sites-online-india).
+`,
+    faq: [
+      { q: "What is in-play betting?", a: "Bets placed while a match is live with real-time odds." },
+      { q: "Cash-out?", a: "Yes — early cash-out on most live cricket markets." },
+    ],
+  },
+  {
+    slug: "how-sports-betting-platforms-work-online",
+    title: "How Sports Betting Platforms Work Online — The Tech Behind Mahadev Book",
+    description: "How sports betting platforms work online — exchange vs bookmaker, odds calculation, settlement, payouts. Demystified for Indian players.",
+    keywords: "how sports betting platforms work online, sports betting platform online, exchange betting explained",
+    category: "Education", author: "Mahadev Book Editorial", publishedAt: "2026-04-15", updatedAt: "2026-04-30", readingTime: 8,
+    cover: COVER.payout,
+    excerpt: "How online betting actually works under the hood — exchange model, odds engine, settlement.",
+    tags: ["education", "how it works"], related: ["fancy-vs-bookmaker-vs-match-odds-explained", "online-betting-website-india-vs-offline-bookies", "mahadev-book-vs-other-betting-id-providers"],
+    content: `
+## Exchange vs Bookmaker — Two Models
+**How sports betting platforms work online**: Bookmaker (site sets odds) vs Exchange (players bet each other, site takes commission). [Mahadev Book](/) uses both.
+
+## How Odds Are Calculated
+Live probability model + market sentiment, adjusted for liability, refreshed 4–10×/sec, ~2–5% margin baked in.
+
+## Settlement
+Match ends → algorithm checks official result → wins credited in seconds → losses deducted instantly.
+
+## Payouts to Your Bank
+Withdraw → KYC re-check → UPI/IMPS triggered → INR in 5–15 min. See [UPI deposit & withdrawal guide](/blog/best-upi-deposit-withdrawal-betting-india).
+
+## Why This Matters
+Smarter bets. Read [match-odds vs fancy vs bookmaker](/blog/fancy-vs-bookmaker-vs-match-odds-explained).
+`,
+    faq: [
+      { q: "Exchange vs bookmaker?", a: "Exchange usually has better odds + lay bets. Mahadev Book offers both." },
+      { q: "How does Mahadev Book make money?", a: "Small commission on exchange wins + transparent margin on bookmaker odds." },
     ],
   },
 ];

@@ -5,12 +5,12 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 
 const NAV = [
-  { label: "Home", href: "/#home" },
-  { label: "Cricket", href: "/#cricket" },
-  { label: "Casino", href: "/#casino" },
+  { label: "Home", href: "/" },
+  { label: "Cricket", href: "/games/cricket" },
+  { label: "Casino", href: "/games/teen-patti" },
   { label: "Blog", href: "/blog" },
-  { label: "About", href: "/#about" },
-  { label: "Contact", href: "/#contact" },
+  { label: "About", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export const Header = () => {
@@ -22,8 +22,10 @@ export const Header = () => {
         <a href="#home" className="flex items-center shrink-0">
           <img
             src={logo}
-            alt="Mahadev Book Logo"
+            alt="Mahadev Book — India's #1 online cricket betting ID provider"
             className="h-9 sm:h-11 md:h-12 lg:h-14 w-auto"
+            width={224}
+            height={56}
           />
         </a>
 

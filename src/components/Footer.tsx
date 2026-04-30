@@ -7,7 +7,7 @@ export const Footer = () => (
   <footer className="border-t border-gold/20 bg-gradient-dark mt-12">
     <div className="container py-14 grid md:grid-cols-5 gap-10">
       <div className="md:col-span-2">
-        <img src={logo} alt="Mahadev Book Logo" className="h-14 w-auto mb-4" />
+        <img src={logo} alt="Get cricket ID online instantly on Mahadev Book India" className="h-14 w-auto mb-4" width={224} height={56} loading="lazy" />
         <p className="text-sm text-muted-foreground max-w-md leading-relaxed">
           Mahadev Book is India's most trusted online cricket betting and live casino ID provider. Get instant verified IDs, INR deposits & withdrawals, and 24x7 WhatsApp support.
         </p>
@@ -21,11 +21,13 @@ export const Footer = () => (
         <h4 className="font-display font-bold text-gold mb-4">Quick Links</h4>
         <ul className="space-y-2 text-sm text-muted-foreground">
           <li><Link to="/" className="hover:text-gold">Home</Link></li>
-          <li><a href="/#cricket" className="hover:text-gold">Cricket Betting</a></li>
-          <li><a href="/#casino" className="hover:text-gold">Live Casino</a></li>
+          <li><Link to="/games/cricket" className="hover:text-gold">Cricket Betting</Link></li>
+          <li><Link to="/games/teen-patti" className="hover:text-gold">Teen Patti</Link></li>
+          <li><Link to="/games/andar-bahar" className="hover:text-gold">Andar Bahar</Link></li>
+          <li><Link to="/games/roulette" className="hover:text-gold">Roulette</Link></li>
           <li><Link to="/blog" className="hover:text-gold">Blog</Link></li>
-          <li><a href="/#about" className="hover:text-gold">About / FAQ</a></li>
-          <li><a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="hover:text-gold">Contact</a></li>
+          <li><Link to="/about" className="hover:text-gold">About Us</Link></li>
+          <li><Link to="/contact" className="hover:text-gold">Contact</Link></li>
         </ul>
       </div>
 
