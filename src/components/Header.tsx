@@ -62,10 +62,16 @@ export const Header = () => {
               {n.label}
             </a>
           ))}
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-            className="block text-center mt-2 px-5 py-2.5 rounded-full font-bold bg-gradient-gold text-primary-foreground">
-            Get ID on WhatsApp
-          </a>
+          <div className="flex gap-2 pt-2">
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
+              className="flex-1 text-center px-5 py-2.5 rounded-full font-semibold border border-gold/50 text-gold">
+              Login
+            </a>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
+              className="flex-1 text-center px-5 py-2.5 rounded-full font-bold bg-gradient-gold text-primary-foreground">
+              Sign Up
+            </a>
+          </div>
         </div>
       )}
     </header>
