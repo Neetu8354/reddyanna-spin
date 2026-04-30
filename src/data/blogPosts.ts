@@ -20,18 +20,50 @@ export interface BlogPost {
   faq?: { q: string; a: string }[];
 }
 
+import sportCricket from "@/assets/sport-cricket.jpg";
+import heroCricket from "@/assets/hero-cricket.jpg";
+import gameTeenpatti from "@/assets/game-teenpatti.jpg";
+import gameAndar from "@/assets/game-andarbahar.jpg";
+import gameRoulette from "@/assets/game-roulette.jpg";
+import gameDragon from "@/assets/game-dragontiger.jpg";
+import gameSlots from "@/assets/game-slots.jpg";
+import gameBlackjack from "@/assets/game-blackjack.jpg";
+import promoPayout from "@/assets/promo-payout.jpg";
+import promoCasino from "@/assets/promo-casino.jpg";
+import promoCricket from "@/assets/promo-cricket.jpg";
+
 const COVER = {
-  cricket: "/src/assets/sport-cricket.jpg",
-  hero: "/src/assets/hero-cricket.jpg",
-  teenpatti: "/src/assets/game-teenpatti.jpg",
-  andar: "/src/assets/game-andarbahar.jpg",
-  roulette: "/src/assets/game-roulette.jpg",
-  dragon: "/src/assets/game-dragontiger.jpg",
-  slots: "/src/assets/game-slots.jpg",
-  blackjack: "/src/assets/game-blackjack.jpg",
-  payout: "/src/assets/promo-payout.jpg",
-  casino: "/src/assets/promo-casino.jpg",
-  promoCricket: "/src/assets/promo-cricket.jpg",
+  cricket: sportCricket,
+  hero: heroCricket,
+  teenpatti: gameTeenpatti,
+  andar: gameAndar,
+  roulette: gameRoulette,
+  dragon: gameDragon,
+  slots: gameSlots,
+  blackjack: gameBlackjack,
+  payout: promoPayout,
+  casino: promoCasino,
+  promoCricket: promoCricket,
+};
+
+/** Keyword-rich ALT text per blog cover (PDF SEO reference compliant) */
+export const COVER_ALT: Record<string, string> = {
+  cricket: "Play online cricket betting on Mahadev Book — IPL 2026 live odds India",
+  hero: "Get Mahadev Book cricket ID online — fast withdrawal India",
+  teenpatti: "Play Teen Patti online real money on Mahadev Book India",
+  andar: "Live Andar Bahar online with Mahadev Book — INR deposits",
+  roulette: "Play live Roulette online India on Mahadev Book casino",
+  dragon: "Dragon Tiger live casino game on Mahadev Book India",
+  slots: "777 online slots real money India — Mahadev Book casino",
+  blackjack: "Live Blackjack online India — play with Mahadev Book ID",
+  payout: "Instant UPI withdrawal in INR with Mahadev Book betting India",
+  casino: "Best live casino India online — Mahadev Book Teen Patti & Roulette",
+  promoCricket: "IPL 2026 betting bonus on Mahadev Book — India's #1 cricket ID",
+};
+
+export const altFor = (cover: string): string => {
+  const entry = Object.entries(COVER).find(([, v]) => v === cover);
+  return entry ? COVER_ALT[entry[0]] : "Mahadev Book online cricket betting India";
 };
 
 export const BLOG_POSTS: BlogPost[] = [
