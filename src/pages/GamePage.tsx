@@ -13,7 +13,7 @@ const GamePage = () => {
   const game = GAMES.find(g => g.slug === slug);
   if (!game) return <Navigate to="/" replace />;
 
-  const url = `https://mahadevvbooks.com/games/${game.slug}`;
+  const url = `https://mahadevregister.live/games/${game.slug}`;
   const jsonLd: object[] = [
     {
       "@context": "https://schema.org",
@@ -22,14 +22,14 @@ const GamePage = () => {
       url,
       description: game.description,
       inLanguage: "en-IN",
-      isPartOf: { "@type": "WebSite", name: "Mahadev Book", url: "https://mahadevvbooks.com/" },
+      isPartOf: { "@type": "WebSite", name: "Mahadev Book", url: "https://mahadevregister.live/" },
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
       name: game.h1,
       serviceType: game.category,
-      provider: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevvbooks.com/" },
+      provider: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevregister.live/" },
       areaServed: { "@type": "Country", name: "India" },
       description: game.description,
       offers: { "@type": "Offer", price: "100", priceCurrency: "INR", availability: "https://schema.org/InStock", url: WHATSAPP_LINK },
@@ -39,8 +39,8 @@ const GamePage = () => {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevvbooks.com/" },
-        { "@type": "ListItem", position: 2, name: "Games", item: "https://mahadevvbooks.com/games" },
+        { "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevregister.live/" },
+        { "@type": "ListItem", position: 2, name: "Games", item: "https://mahadevregister.live/games" },
         { "@type": "ListItem", position: 3, name: game.h1, item: url },
       ],
     },
