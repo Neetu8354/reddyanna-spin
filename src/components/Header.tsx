@@ -15,42 +15,54 @@ export const Header = () => {
   const [open, setOpen] = useState(false);
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/80 border-b border-gold/20">
-      <div className="container flex items-center justify-between py-2.5 sm:py-3 gap-2">
-        <a href="#home" className="flex items-center gap-3 shrink-0">
-          <img src={logo} alt="Mahadev Book Logo" className="h-9 sm:h-12 md:h-14 w-auto" />
+      <div className="container flex items-center justify-between py-2.5 sm:py-3 gap-2 sm:gap-4">
+        {/* Logo */}
+        <a href="#home" className="flex items-center shrink-0">
+          <img
+            src={logo}
+            alt="Mahadev Book Logo"
+            className="h-9 sm:h-11 md:h-12 lg:h-14 w-auto"
+          />
         </a>
 
-        <nav className="hidden lg:flex items-center gap-8">
+        {/* Desktop nav */}
+        <nav className="hidden lg:flex items-center gap-6 xl:gap-8">
           {NAV.map((n) => (
-            <a key={n.href} href={n.href} className="text-sm font-medium text-foreground/90 hover:text-gold transition-colors">
+            <a
+              key={n.href}
+              href={n.href}
+              className="text-sm font-medium text-foreground/90 hover:text-gold transition-colors"
+            >
               {n.label}
             </a>
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-3">
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-            className="px-5 py-2 rounded-full text-sm font-semibold border border-gold/50 text-gold hover:bg-gold hover:text-primary-foreground transition-colors">
+        {/* Right cluster — auth buttons + menu icon */}
+        <div className="flex items-center gap-1.5 sm:gap-2 md:gap-3 ml-auto">
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 rounded-full text-xs sm:text-sm font-semibold border border-gold/50 text-gold hover:bg-gold hover:text-primary-foreground transition-colors whitespace-nowrap"
+          >
             Login
           </a>
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-            className="px-5 py-2 rounded-full text-sm font-bold bg-gradient-gold text-primary-foreground shadow-gold hover:shadow-gold-lg transition-all">
-            Sign Up
-          </a>
-        </div>
-
-        <div className="flex items-center gap-2 ml-auto md:ml-0">
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-            className="md:hidden px-3 py-1.5 rounded-full text-xs font-semibold border border-gold/50 text-gold whitespace-nowrap">
-            Login
-          </a>
-          <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer"
-            className="md:hidden px-3 py-1.5 rounded-full text-xs font-bold bg-gradient-gold text-primary-foreground shadow-gold whitespace-nowrap">
+          <a
+            href={WHATSAPP_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-3 py-1.5 sm:px-4 sm:py-2 md:px-5 rounded-full text-xs sm:text-sm font-bold bg-gradient-gold text-primary-foreground shadow-gold hover:shadow-gold-lg transition-all whitespace-nowrap"
+          >
             Sign Up
           </a>
 
-          <button className="lg:hidden text-gold p-1.5 ml-1" onClick={() => setOpen(!open)} aria-label="Menu">
-            {open ? <X /> : <Menu />}
+          <button
+            className="lg:hidden text-gold p-1.5 sm:p-2 ml-0.5 sm:ml-1"
+            onClick={() => setOpen(!open)}
+            aria-label="Menu"
+          >
+            {open ? <X className="w-5 h-5 sm:w-6 sm:h-6" /> : <Menu className="w-5 h-5 sm:w-6 sm:h-6" />}
           </button>
         </div>
       </div>
