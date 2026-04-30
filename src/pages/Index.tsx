@@ -11,7 +11,7 @@ import { FAQ } from "@/components/FAQ";
 import { Footer } from "@/components/Footer";
 import { WhatsAppChatbot } from "@/components/WhatsAppChatbot";
 import { SEO } from "@/components/SEO";
-import { BLOG_POSTS } from "@/data/blogPosts";
+import { BLOG_POSTS, altFor } from "@/data/blogPosts";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -101,7 +101,7 @@ const Index = () => {
               <Link key={post.slug} to={`/blog/${post.slug}`}
                 className="group rounded-2xl overflow-hidden border border-gold/20 bg-card hover:border-gold/60 hover:shadow-gold transition-all">
                 <div className="aspect-video bg-muted overflow-hidden">
-                  <img src={post.cover} alt={post.title} loading="lazy" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img src={post.cover} alt={altFor(post.cover)} loading="lazy" width={600} height={338} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-5">
                   <span className="text-xs font-bold text-gold">{post.category}</span>

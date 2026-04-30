@@ -3,7 +3,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { TickerBar } from "@/components/TickerBar";
 import { SEO } from "@/components/SEO";
-import { BLOG_POSTS, BLOG_CATEGORIES } from "@/data/blogPosts";
+import { BLOG_POSTS, BLOG_CATEGORIES, altFor } from "@/data/blogPosts";
 import { Calendar, Clock, Tag } from "lucide-react";
 
 const Blog = () => {
@@ -75,8 +75,10 @@ const Blog = () => {
                 <div className="aspect-video overflow-hidden bg-muted">
                   <img
                     src={post.cover}
-                    alt={post.title}
+                    alt={altFor(post.cover)}
                     loading="lazy"
+                    width={800}
+                    height={450}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
                 </div>
