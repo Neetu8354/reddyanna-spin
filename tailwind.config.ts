@@ -57,6 +57,12 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        gold: {
+          DEFAULT: 'hsl(var(--gold))',
+          light: 'hsl(var(--gold-light))',
+          dark: 'hsl(var(--gold-dark))',
+        },
+        whatsapp: 'hsl(var(--whatsapp))',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -77,14 +83,6 @@ export default {
         'gold': 'var(--shadow-gold)',
         'gold-lg': 'var(--shadow-gold-lg)',
         'card': 'var(--shadow-card)',
-      },
-      colors: {
-        gold: {
-          DEFAULT: 'hsl(var(--gold))',
-          light: 'hsl(var(--gold-light))',
-          dark: 'hsl(var(--gold-dark))',
-        },
-        whatsapp: 'hsl(var(--whatsapp))',
       },
       keyframes: {
         "accordion-down": {
