@@ -21,9 +21,9 @@ const Index = () => {
       "@type": "Organization",
       name: "Mahadev Book",
       alternateName: ["Mahadev Book ID", "Mahadevvbooks"],
-      url: "https://mahadevregister.live/",
-      logo: "https://mahadevregister.live/favicon.png",
-      image: "https://mahadevregister.live/og-image.jpg",
+      url: "https://www.mahadevregister.live/",
+      logo: "https://www.mahadevregister.live/favicon.png",
+      image: "https://www.mahadevregister.live/og-image.jpg",
       description: "India's most trusted online cricket betting & live casino ID provider with instant UPI deposits & withdrawals in INR.",
       sameAs: ["https://wa.link/reddyanna_"],
       contactPoint: {
@@ -38,10 +38,10 @@ const Index = () => {
       "@context": "https://schema.org",
       "@type": "WebSite",
       name: "Mahadev Book",
-      url: "https://mahadevregister.live/",
+      url: "https://www.mahadevregister.live/",
       potentialAction: {
         "@type": "SearchAction",
-        target: "https://mahadevregister.live/blog?q={search_term_string}",
+        target: "https://www.mahadevregister.live/blog?q={search_term_string}",
         "query-input": "required name=search_term_string",
       },
     },
@@ -50,7 +50,7 @@ const Index = () => {
       "@type": "Service",
       name: "Online Cricket Betting ID & Live Casino",
       serviceType: "Cricket betting ID provider",
-      provider: { "@type": "Organization", name: "Mahadev Book", url: "https://mahadevregister.live/" },
+      provider: { "@type": "Organization", name: "Mahadev Book", url: "https://www.mahadevregister.live/" },
       areaServed: { "@type": "Country", name: "India" },
       description: "Instant verified online cricket betting ID for IPL 2026, T20 World Cup and live casino games like Teen Patti, Andar Bahar, Roulette. UPI deposit & withdrawal in INR.",
       offers: {
@@ -84,7 +84,7 @@ const Index = () => {
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://mahadevregister.live/" }],
+      itemListElement: [{ "@type": "ListItem", position: 1, name: "Home", item: "https://www.mahadevregister.live/" }],
     },
   ];
 
