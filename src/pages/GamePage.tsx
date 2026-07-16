@@ -17,23 +17,33 @@ const GamePage = () => {
   const jsonLd: object[] = [
     {
       "@context": "https://schema.org",
-      "@type": "WebPage",
-      name: game.h1,
-      url,
-      description: game.description,
-      inLanguage: "en-IN",
-      isPartOf: { "@type": "WebSite", name: "Mahadev Book", url: "https://www.mahadevregister.live/" },
+      "@type": "Organization",
+      "@id": "https://www.mahadevregister.live/#organization",
+      name: "Mahadev Book",
+      url: "https://www.mahadevregister.live/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.mahadevregister.live/logo.png"
+      }
     },
     {
       "@context": "https://schema.org",
-      "@type": "Service",
+      "@type": "WebSite",
+      "@id": "https://www.mahadevregister.live/#website",
+      url: "https://www.mahadevregister.live/",
+      name: "Mahadev Book",
+      publisher: { "@id": "https://www.mahadevregister.live/#organization" },
+      inLanguage: "en-IN"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `https://www.mahadevregister.live/games/${game.slug}#webpage`,
+      url,
       name: game.h1,
-      serviceType: game.category,
-      provider: { "@type": "Organization", name: "Mahadev Book", url: "https://www.mahadevregister.live/" },
-      areaServed: { "@type": "Country", name: "India" },
-      description: game.description,
-      offers: { "@type": "Offer", price: "100", priceCurrency: "INR", availability: "https://schema.org/InStock", url: WHATSAPP_LINK },
-      aggregateRating: { "@type": "AggregateRating", ratingValue: "4.9", bestRating: "5", ratingCount: "2480" },
+      isPartOf: { "@id": "https://www.mahadevregister.live/#website" },
+      about: { "@id": "https://www.mahadevregister.live/#organization" },
+      inLanguage: "en-IN"
     },
     {
       "@context": "https://schema.org",

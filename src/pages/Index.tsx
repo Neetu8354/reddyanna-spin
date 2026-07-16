@@ -19,27 +19,32 @@ const Index = () => {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
+      "@id": "https://www.mahadevregister.live/#organization",
       name: "Mahadev Book",
-      alternateName: ["Mahadev Book ID", "Mahadevvbooks"],
       url: "https://www.mahadevregister.live/",
-      logo: "https://www.mahadevregister.live/favicon.png",
-      image: "https://www.mahadevregister.live/og-image.jpg",
-      description: "India's most trusted online cricket betting & live casino ID provider with instant UPI deposits & withdrawals in INR.",
-      sameAs: ["https://wa.link/reddyanna_"],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "Customer Support",
-        availableLanguage: ["English", "Hindi"],
-        url: "https://wa.link/reddyanna_",
-      },
-      areaServed: { "@type": "Country", name: "India" },
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.mahadevregister.live/logo.png"
+      }
     },
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      name: "Mahadev Book",
+      "@id": "https://www.mahadevregister.live/#website",
       url: "https://www.mahadevregister.live/",
-      inLanguage: "en-IN",
+      name: "Mahadev Book",
+      publisher: { "@id": "https://www.mahadevregister.live/#organization" },
+      inLanguage: "en-IN"
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": "https://www.mahadevregister.live/#webpage",
+      url: "https://www.mahadevregister.live/",
+      name: "Mahadev Book",
+      isPartOf: { "@id": "https://www.mahadevregister.live/#website" },
+      about: { "@id": "https://www.mahadevregister.live/#organization" },
+      inLanguage: "en-IN"
     },
     {
       "@context": "https://schema.org",
