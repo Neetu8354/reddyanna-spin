@@ -31,7 +31,7 @@ export const GAMES: GameDef[] = [
     keywords: "online cricket betting india, ipl 2026 betting, t20 world cup betting, fancy cricket bet, live cricket betting tips online, online sports betting platform",
     intro: "Mahadev Book is India's most trusted online cricket betting platform — bet on every IPL match, T20 World Cup, BBL, PSL, Tests and ODIs with the best live odds in INR.",
     image: sportCricket,
-    alt: "Bet on online cricket IPL 2026 live with Mahadev Book India",
+    alt: "Cricket player in a stadium",
     features: [
       { title: "IPL & T20 Live Odds", text: "Ball-by-ball match-odds, bookmaker, fancy, session and toss markets." },
       { title: "60,000+ Events / Month", text: "Every league worldwide — IPL, BBL, PSL, CPL, county, women's." },
