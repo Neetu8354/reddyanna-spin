@@ -50,13 +50,13 @@ const Index = () => {
       "@context": "https://schema.org",
       "@type": "FAQPage",
       mainEntity: [
-        { "@type": "Question", name: "What is Mahadev Book?", acceptedAnswer: { "@type": "Answer", text: "Mahadev Book is India's most trusted online cricket betting and live casino ID provider. We offer verified betting IDs with instant deposits & withdrawals in Indian Rupees (?)." } },
+        { "@type": "Question", name: "What is Mahadev Book?", acceptedAnswer: { "@type": "Answer", text: "Mahadev Book is India's most trusted online cricket betting and live casino ID provider. We offer verified betting IDs with instant deposits & withdrawals in Indian Rupees (₹)." } },
         { "@type": "Question", name: "How do I get a Mahadev Book ID?", acceptedAnswer: { "@type": "Answer", text: "Simply click any 'Get ID' button on the site to chat with us on WhatsApp. We'll provide your verified ID within 2 minutes." } },
         { "@type": "Question", name: "Is Mahadev Book safe and legal?", acceptedAnswer: { "@type": "Answer", text: "Yes. Mahadev Book operates with verified KYC, encrypted transactions and is the most trusted platform for online betting in India. Your data and funds are 100% secure." } },
-        { "@type": "Question", name: "What payment methods do you accept?", acceptedAnswer: { "@type": "Answer", text: "We accept all Indian payment methods � UPI, Paytm, PhonePe, Google Pay, IMPS, NEFT and direct bank transfer. Deposits & withdrawals are instant, in INR." } },
+        { "@type": "Question", name: "What payment methods do you accept?", acceptedAnswer: { "@type": "Answer", text: "We accept all Indian payment methods — UPI, Paytm, PhonePe, Google Pay, IMPS, NEFT and direct bank transfer. Deposits & withdrawals are instant, in INR." } },
         { "@type": "Question", name: "What sports and games can I bet on?", acceptedAnswer: { "@type": "Answer", text: "Cricket (IPL, T20, ODI, Test, BBL, PSL), live casino games like Teen Patti, Andar Bahar, Roulette, Dragon Tiger, Blackjack, and 200+ slot games." } },
         { "@type": "Question", name: "How fast are withdrawals?", acceptedAnswer: { "@type": "Answer", text: "Withdrawals to UPI/Bank are processed within 5 minutes, 24x7. No hidden charges, no waiting period." } },
-        { "@type": "Question", name: "Do you have a minimum deposit?", acceptedAnswer: { "@type": "Answer", text: "Yes, the minimum deposit is just ?100. You can start small and scale up as you go." } },
+        { "@type": "Question", name: "Do you have a minimum deposit?", acceptedAnswer: { "@type": "Answer", text: "Yes, the minimum deposit is just ₹100. You can start small and scale up as you go." } },
         { "@type": "Question", name: "How do I contact support?", acceptedAnswer: { "@type": "Answer", text: "Click any WhatsApp button on the site. Our support team replies instantly, 24x7, in Hindi and English." } },
       ],
     },
@@ -83,7 +83,7 @@ const Index = () => {
         <Testimonials />
         <CTABanner />
 
-        {/* Featured Blog Section � drives internal SEO juice */}
+        {/* Featured Blog Section — drives internal SEO juice */}
         <section className="container py-16 md:py-24" id="blog-preview">
           <div className="text-center max-w-2xl mx-auto mb-12">
             <div className="text-gold text-sm font-semibold tracking-widest uppercase mb-3">From the Blog</div>
@@ -91,12 +91,12 @@ const Index = () => {
               Expert <span className="text-gradient-gold">Betting Guides</span> & Strategy
             </h2>
             <p className="text-muted-foreground mt-4">
-              IPL 2026 tips, Teen Patti strategy, UPI payment guides � written by India's top betting and casino experts.
+              IPL 2026 tips, Teen Patti strategy, UPI payment guides — written by India's top betting and casino experts.
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {featured.map(post => (
-              <Link key={post.slug} to={/blog/}
+              <Link key={post.slug} to={`/blog/${post.slug}`}
                 className="group rounded-2xl overflow-hidden border border-gold/20 bg-card hover:border-gold/60 hover:shadow-gold transition-all">
                 <div className="aspect-video bg-muted overflow-hidden">
                   <img src={post.cover} alt={altFor(post.cover)} loading="lazy" width={600} height={338} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
@@ -111,7 +111,7 @@ const Index = () => {
           </div>
           <div className="text-center mt-10">
             <Link to="/blog" className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-gold/40 text-gold font-bold hover:bg-gold/10 transition-all">
-              Read all articles ?
+              Read all articles →
             </Link>
           </div>
         </section>
