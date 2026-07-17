@@ -10,19 +10,38 @@ const Blog = () => {
   const jsonLd = [
     {
       "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://www.mahadevregister.live/#organization",
+      name: "Mahadev Book",
+      url: "https://www.mahadevregister.live/",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.mahadevregister.live/logo.png"
+      }
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "Blog",
       name: "Mahadev Book Blog",
       url: "https://www.mahadevregister.live/blog",
       description: "Expert guides on cricket betting, IPL strategy, live casino, Teen Patti, Andar Bahar and online betting in India.",
-      publisher: { "@type": "Organization", name: "Mahadev Book", url: "https://www.mahadevregister.live" },
+      publisher: { "@id": "https://www.mahadevregister.live/#organization" },
       blogPost: BLOG_POSTS.map(p => ({
         "@type": "BlogPosting",
         headline: p.title,
         url: `https://www.mahadevregister.live/blog/${p.slug}`,
+        mainEntityOfPage: { "@id": `https://www.mahadevregister.live/blog/${p.slug}#webpage` },
         datePublished: p.publishedAt,
         dateModified: p.updatedAt,
         author: { "@type": "Organization", name: p.author },
         description: p.description,
+        image: {
+          "@type": "ImageObject",
+          url: `https://www.mahadevregister.live${p.cover}`,
+          width: 800,
+          height: 450
+        },
+        publisher: { "@id": "https://www.mahadevregister.live/#organization" },
       })),
     },
     {
@@ -38,7 +57,7 @@ const Blog = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEO
-        title="Cricket Betting & Casino Blog India 2026 | Mahadev Book Guides & Tips"
+        title="Cricket Betting Blog India 2026 | Mahadev Book"
         description="Expert guides on IPL 2026 betting, online cricket ID, Teen Patti, Andar Bahar, live casino, UPI deposits and winning strategy. India's top betting blog."
         canonical="/blog"
         keywords="cricket betting blog, ipl 2026 tips, teen patti guide, andar bahar strategy, online casino india, mahadev book blog"
@@ -69,14 +88,16 @@ const Blog = () => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {BLOG_POSTS.map(post => (
+          {BLOG_POSTS.map((post, index) => (
             <article key={post.slug} className="group rounded-2xl overflow-hidden border border-gold/20 bg-card hover:border-gold/60 hover:shadow-gold transition-all">
               <Link to={`/blog/${post.slug}`} className="block">
                 <div className="aspect-video overflow-hidden bg-muted">
                   <img
                     src={post.cover}
                     alt={altFor(post.cover)}
-                    loading="lazy"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    fetchPriority={index === 0 ? "high" : undefined}
+                    decoding="async"
                     width={800}
                     height={450}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -93,7 +114,7 @@ const Blog = () => {
                   <p className="text-sm text-muted-foreground line-clamp-3">{post.excerpt}</p>
                   <div className="flex items-center gap-1 text-xs text-muted-foreground pt-1">
                     <Calendar className="w-3 h-3" />
-                    <time dateTime={post.publishedAt}>{new Date(post.publishedAt).toLocaleDateString("en-IN", { year: "numeric", month: "short", day: "numeric" })}</time>
+                    <time dateTime={post.publishedAt}>{new Intl.DateTimeFormat("en-IN", { year: "numeric", month: "short", day: "numeric", timeZone: "UTC" }).format(new Date(`${post.publishedAt}T00:00:00Z`))}</time>
                   </div>
                 </div>
               </Link>
