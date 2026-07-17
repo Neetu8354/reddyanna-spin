@@ -99,7 +99,7 @@ const GamePage = () => {
         </header>
 
         <div className="aspect-video w-full rounded-2xl overflow-hidden border border-gold/20 mb-10 bg-muted">
-          <img src={game.image} alt={game.alt} className="w-full h-full object-cover" loading="eager" width={1280} height={720} />
+          <img src={game.image} alt={game.alt} className="w-full h-full object-cover" loading="eager" fetchPriority="high" decoding="async" width={1280} height={720} />
         </div>
 
         <section className="grid md:grid-cols-3 gap-5 mb-10">
