@@ -12,7 +12,7 @@ const Blog = () => {
       "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://www.mahadevregister.live/#organization",
-      name: "Mahadev Book",
+      name: "Mahadev Register",
       url: "https://www.mahadevregister.live/",
       logo: {
         "@type": "ImageObject",
@@ -22,9 +22,9 @@ const Blog = () => {
     {
       "@context": "https://schema.org",
       "@type": "Blog",
-      name: "Mahadev Book Blog",
+      name: "Mahadev Register Blog",
       url: "https://www.mahadevregister.live/blog",
-      description: "Expert guides on cricket betting, IPL strategy, live casino, Teen Patti, Andar Bahar and online betting in India.",
+      description: "Expert guides on cricket betting, IPL strategy, Teen Patti, Andar Bahar and online betting in India.",
       publisher: { "@id": "https://www.mahadevregister.live/#organization" },
       blogPost: BLOG_POSTS.map(p => ({
         "@type": "BlogPosting",

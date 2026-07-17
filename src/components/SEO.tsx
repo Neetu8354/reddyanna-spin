@@ -25,7 +25,7 @@ export const SEO = ({
   ogType = "website",
   publishedTime,
   modifiedTime,
-  author = "Mahadev Book",
+  author = "Mahadev Register",
   jsonLd,
   noindex,
 }: SEOProps) => {
@@ -51,7 +51,7 @@ export const SEO = ({
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={fullImage} />
-      <meta property="og:site_name" content="Mahadev Book" />
+      <meta property="og:site_name" content="Mahadev Register" />
       <meta property="og:locale" content="en_IN" />
 
       <meta name="twitter:card" content="summary_large_image" />

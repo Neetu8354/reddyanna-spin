@@ -19,7 +19,7 @@ const GamePage = () => {
       "@context": "https://schema.org",
       "@type": "Organization",
       "@id": "https://www.mahadevregister.live/#organization",
-      name: "Mahadev Book",
+      name: "Mahadev Register",
       url: "https://www.mahadevregister.live/",
       logo: {
         "@type": "ImageObject",
@@ -31,7 +31,7 @@ const GamePage = () => {
       "@type": "WebSite",
       "@id": "https://www.mahadevregister.live/#website",
       url: "https://www.mahadevregister.live/",
-      name: "Mahadev Book",
+      name: "Mahadev Register",
       publisher: { "@id": "https://www.mahadevregister.live/#organization" },
       inLanguage: "en-IN"
     },
