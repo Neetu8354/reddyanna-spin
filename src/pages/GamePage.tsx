@@ -103,6 +103,7 @@ const GamePage = () => {
         </div>
 
         <section className="grid md:grid-cols-3 gap-5 mb-10">
+          <h2 className="col-span-full text-2xl md:text-3xl font-display font-bold text-gold mb-6">Key Features</h2>
           {game.features.map((f, i) => (
             <div key={i} className="rounded-2xl border border-gold/20 p-5 bg-card">
               <h3 className="text-gold font-bold text-lg mb-2">{f.title}</h3>
