@@ -17,7 +17,7 @@ export const BonusPopup = () => {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed inset-0 z-40 flex items-end justify-end p-4 sm:p-6 pointer-events-none">
+    <div className="fixed inset-0 z-40 flex items-center justify-center p-4 pointer-events-none">
       {/* Overlay */}
       <div
         className="absolute inset-0 bg-black/20 pointer-events-auto"
@@ -25,7 +25,7 @@ export const BonusPopup = () => {
       />
 
       {/* Popup */}
-      <div className="relative pointer-events-auto w-full max-w-sm animate-in fade-in slide-in-from-bottom-4 duration-500">
+      <div className="relative pointer-events-auto w-full max-w-sm animate-in fade-in zoom-in-95 duration-500">
         <div className="rounded-2xl bg-card border border-gold/40 shadow-gold-lg overflow-hidden">
           {/* Close Button */}
           <button
